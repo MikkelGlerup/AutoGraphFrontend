@@ -1,0 +1,20 @@
+<span>
+  <div style ="display: block" *ngIf="signalRService.barData">
+    <canvas baseChart
+    [datasets] = "signalRService.barData"
+    [labels] = "barChartLabels"
+    [options] = "barChartOptions"
+    [legend] = "barChartLegend"
+    [type] = "barChartType">
+    </canvas>
+  </div>
+  <div style ="display: block" *ngIf="signalRService.pieData">
+    <canvas baseChart
+    [datasets] = "signalRService.pieData"
+    [labels] = "pieChartLabels"
+    [options] = "pieChartOptions"
+    [legend] = "pieChartLegend"
+    [type] = "pieChartType">
+    </canvas>
+  </div>
+</span>
